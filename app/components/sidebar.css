@@ -1,0 +1,19 @@
+#recruitment {
+  color: #fff;
+}
+
+.title {
+  color: #D2D2D2;
+}
+
+.department input {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 50px;
+}
+.department span {
+  font-size: 16px;
+  display: inline-block;
+  line-height: 50px;
+  padding-left: 20px;
+}
