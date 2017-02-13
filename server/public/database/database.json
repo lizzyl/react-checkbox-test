@@ -127,7 +127,7 @@
 			"id": 2,
 			"title": "产品设计部门",
 			"quantity": 136,
-			"checked": true,
+			"checked": false,
 			"positions": [{
 				"title": "网页设计师",
 				"checked": false,
