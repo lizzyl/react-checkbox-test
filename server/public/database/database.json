@@ -101,7 +101,7 @@
 			"id": 1,
 			"title": "工程研发部门",
 			"quantity": 120,
-			"checked": false,
+			"checked": true,
 			"positions": [{
 				"title": "Mac 开发工程师",
 				"checked": false,
@@ -127,14 +127,14 @@
 			"id": 2,
 			"title": "产品设计部门",
 			"quantity": 136,
-			"checked": false,
+			"checked": true,
 			"positions": [{
 				"title": "网页设计师",
 				"checked": false,
 				"quantity": 47
 			}, {
 				"title": "ID/工业设计师",
-				"checked": false,
+				"checked": true,
 				"quantity": 39
 			}, {
 				"title": "视觉设计师/GUI界面设计师",
