@@ -41,14 +41,12 @@ let SideBar = React.createClass({
 		this.setState({departments: _departments})
 	},
 	handleChangeCheckState1: function(index1, index2) {
-		// console.log(index1+' '+index2)
+		console.log(index1+' '+index2)
 		this.state.departments[index1].positions[index2].checked = !this.state.departments[index1].positions[index2].checked
 		// this.setState({departments: _departments})
 		console.log(this.state.departments[index1].positions[index2].checked)
 	},
 	clearCheck: function() {
-		// let _departments = this.state.departments;
-		// _departments.
 		for(let i=0; i<this.state.departments.length; i++){
 			this.state.departments[i].checked = false
 
@@ -56,7 +54,6 @@ let SideBar = React.createClass({
 				item.checked = false;
 			});
 		}
-
 	},
 	render: function() {
 
