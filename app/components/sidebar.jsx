@@ -95,9 +95,9 @@ let SideBar = React.createClass({
 		console.log('after:'+this.state.departments[index].checked)
 		console.log(this.state.departments)
 
-		// this.state.departments[index].positions.map((item) => {
-		// 	item.checked = !item.checked;
-		// });
+		this.state.departments[index].positions.map((item) => {
+			item.checked = !item.checked;
+		});
 
 		// this.setState({departments: _departments})
 
@@ -109,6 +109,7 @@ let SideBar = React.createClass({
 			<div id="recruitment">
 				<h2 className="title">{this.state.title}</h2>
 				<a href="javascript:;">清空</a>
+{console.log(this.state.departments)}
 				<CheckBoxs test="test" options={this.state.departments} onChange={this.handleChangeCheckState.bind(this)} />
 			</div>
 		)

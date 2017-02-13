@@ -1,4 +1,5 @@
 require('./list.css')
+require('./checkbox.css')
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -19,39 +20,37 @@ let Lists = React.createClass({
 
 	// },
 	componentDidMount: function() {
-				console.log(": ")
-		console.log(this.props.options)
-		const _options = this.props.options;
-		for(let i=0; i<_options.length; i++) {
-			if(_options[i].checked) {
-				ReactDOM.findDOMNode(this.refs['checkbox-' + i].className='ui-checkbox on');
-			} else {
-				ReactDOM.findDOMNode(this.refs['checkbox-' + i].className='ui-checkbox')
-			}
-		}
+		// console.log(": ")
+		// console.log(this.props.options)
+		// const _options = this.props.options;
+		// for(let i=0; i<_options.length; i++) {
+		// 	if(_options[i].checked) {
+		// 		ReactDOM.findDOMNode(this.refs['listcheckbox-' + i].className='ui-checkbox on');
+		// 	} else {
+		// 		ReactDOM.findDOMNode(this.refs['listcheckbox-' + i].className='ui-checkbox')
+		// 	}
+		// }
 	},
 	handleChecked: function(index) {
-		console.log(": ")
-		console.log(index)
-		const _this = ReactDOM.findDOMNode(this.refs['checkbox-'+index]);
-		if(_this.className == 'ui-checkbox') {
-			_this.className='ui-checkbox on';
-		} else {
-			_this.className = 'ui-checkbox';
-		}
+    // const _this = ReactDOM.findDOMNode(this.refs['listcheckbox-'+index]);
+    console.log('list:')
+    // console.log(_this)
+    // if(_this.className == 'ui-checkbox') {
+    //   _this.className='ui-checkbox on';
+    // } else {
+    //   _this.className = 'ui-checkbox';
+    // }
 	},
 	render: function() {
 		return (
 			<div id="list">
 				{this.props.options.map((item, index) => {
 					return(
-
-							<div id="checkbox" ref={'checkbox-'+index} className="ui-checkbox" >
-								<input className="input-hidden" type="checkbox" defaultChecked={item.checked} />
-								<span className="checkbox-body"></span>
-								<span className="checkbox-text">{item.title}</span>
-							</div>
-
+						<div key={index} ref={'listcheckbox-'+index} className="ui-checkbox" onClick={this.handleChecked.bind(this, index)}>
+							<input className="input-hidden" type="checkbox" defaultChecked={item.checked} />
+							<span className="checkbox-body"></span>
+							<span className="checkbox-text">{item.title}</span>
+						</div>
 					)
 				})}
 			</div>

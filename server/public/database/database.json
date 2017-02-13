@@ -104,7 +104,7 @@
 			"checked": true,
 			"positions": [{
 				"title": "Mac 开发工程师",
-				"checked": false,
+				"checked": true,
 				"quantity": 9
 			}, {
 				"title": "iOS App 测试工程师",

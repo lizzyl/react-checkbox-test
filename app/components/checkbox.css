@@ -1,11 +1,21 @@
 
 
-#checkbox input.input-hidden {
+.ui-checkbox input.input-hidden {
+  display: none;
   font-size: 20px;
   line-height: 30px;
 }
-
-#checkbox span.checkbox-text {
+.ui-checkbox span.checkbox-body {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-bottom: -3px;
+  background: url('../images/checkbox.png') no-repeat left top;
+}
+.ui-checkbox.on span.checkbox-body {
+  background: url('../images/checked.png') no-repeat left top;
+}
+.ui-checkbox span.checkbox-text {
   font-size: 14px;
   display: inline-block;
   line-height: 30px;
