@@ -5,7 +5,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	entry: [
-		'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+		'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
 		'webpack/hot/only-dev-server',
 		'./index.jsx' // Your appʼs entry point
 	],
@@ -23,18 +23,18 @@ module.exports = {
 	},
 	devServer: {
 		contentBase: "./build", //静态资源的目录
-			noInfo: true, //  --no-info option
-			hot: true,   //自动刷新
-			inline: true
-		},
+		noInfo: true, //  --no-info option
+		hot: true, //自动刷新
+		inline: true
+	},
 	plugins: [
 		new webpack.DefinePlugin({
-	      'process.env':{
-	        'NODE_ENV': JSON.stringify('production')
-	      }
-	    }),
-		new CopyWebpackPlugin([
-			{from: './index.html'}
-		])
+			'process.env': {
+				'NODE_ENV': JSON.stringify('production')
+			}
+		}),
+		new CopyWebpackPlugin([{
+			from: './index.html'
+		}])
 	]
 };

@@ -9,10 +9,10 @@ import CheckBox from './checkbox.jsx';
 let CheckBoxs = React.createClass({
 	componentDidMount: function() {
 		console.log("checkboxs: ")
-console.log(this.props.options)
+		console.log(this.props.options)
 		let _options = this.props.options;
 		const _this = this;
-		setTimeout(function() {
+		setInterval(function() {
 			_options = _this.props.options;
 			for(let i=0; i<_options.length; i++) {
 				if(_options[i].checked) {
@@ -20,8 +20,7 @@ console.log(this.props.options)
 				} else {
 					ReactDOM.findDOMNode(_this.refs['checkbox-' + i]).className='ui-checkbox';
 				}
-		}
-			console.log(_this.props.options)
+			}
 		},300)
 
 

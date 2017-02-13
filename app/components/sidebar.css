@@ -2,9 +2,7 @@
   color: #fff;
 }
 
-.title {
-  color: #D2D2D2;
-}
+
 
 .department input {
   display: inline-block;
@@ -16,4 +14,17 @@
   display: inline-block;
   line-height: 50px;
   padding-left: 20px;
+}
+div.head {
+  width: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.title {
+  color: #D2D2D2;
+  float: left;
+}
+a.clear {
+  float: right;
+  color: #fff;
 }

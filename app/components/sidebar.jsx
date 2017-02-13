@@ -6,27 +6,10 @@ import CheckBoxs from './checkboxs.jsx';
 
 let SideBar = React.createClass({
 	getInitialState: function() {
-		// jsonp(this.props.source, "", "callback", (data) => {
-		// 	if(data.status) {
-		// 		if(this.isMounted()) {
-		// 			return {
-		// 				title: data.title,
-		// 				departments: data.departments,
-		// 			};
-		// 		}
-		// 	}else {
-		// 		return {
-		// 			title: '',
-		// 			departments: [],
-		// 		};
-		// 		alert(data.msg);
-		// 		reject("get data recruitment error!");
-		// 	}
-		// })
-				return {
-					title: '',
-					departments: [],
-				};
+		return {
+			title: '',
+			departments: [],
+		};
 	},
 	loadData: function() {
 		jsonp(this.props.source, "", "callback", (data) => {
@@ -48,11 +31,8 @@ let SideBar = React.createClass({
 	},
 	handleChangeCheckState: function(index) {
 		let _departments = this.state.departments;
-		console.log(index)
-		console.log('before: '+_departments[index].checked)
-		_departments[index].checked = !_departments[index].checked
-		console.log('after:'+_departments[index].checked)
 
+		_departments[index].checked = !_departments[index].checked
 
 		_departments[index].positions.map((item) => {
 			item.checked = !item.checked;
@@ -61,18 +41,31 @@ let SideBar = React.createClass({
 		this.setState({departments: _departments})
 	},
 	handleChangeCheckState1: function(index1, index2) {
-		console.log(index1+' '+index2)
+		// console.log(index1+' '+index2)
 		this.state.departments[index1].positions[index2].checked = !this.state.departments[index1].positions[index2].checked
 		// this.setState({departments: _departments})
 		console.log(this.state.departments[index1].positions[index2].checked)
+	},
+	clearCheck: function() {
+		// let _departments = this.state.departments;
+		// _departments.
+		for(let i=0; i<this.state.departments.length; i++){
+			this.state.departments[i].checked = false
+
+			this.state.departments[i].positions.map((item) => {
+				item.checked = false;
+			});
+		}
+
 	},
 	render: function() {
 
 		return (
 			<div id="recruitment">
-				<h2 className="title">{this.state.title}</h2>
-				<a href="javascript:;">清空</a>
-{console.log(this.state.departments)}
+				<div className="head">
+					<h2 className="title">{this.state.title}</h2>
+					<a className="clear" href="javascript:;" onClick={this.clearCheck}>清空</a>
+				</div>
 				<CheckBoxs test="test" options={this.state.departments} onChange1={this.handleChangeCheckState1.bind(this)} onChange={this.handleChangeCheckState.bind(this)} />
 			</div>
 		)
