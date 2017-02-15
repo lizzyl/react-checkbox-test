@@ -7,7 +7,6 @@ import Lists from './list.jsx';
 import CheckBox from './checkbox.jsx';
 
 let CheckBoxs = React.createClass({
-
 	render: function() {
 		return (
 			<div id="checkboxs">

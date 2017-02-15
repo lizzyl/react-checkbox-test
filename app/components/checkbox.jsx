@@ -19,10 +19,7 @@ let CheckBox = React.createClass({
 	},
 	handleChecked: function(index) {
 		this.props.onChange(index)
-
     const _this = ReactDOM.findDOMNode(this.refs['checkbox-'+this.props.index]);
-    // console.log('list:')
-    // console.log(_this)
     if(_this.className == 'ui-checkbox') {
       _this.className='ui-checkbox on';
     } else {

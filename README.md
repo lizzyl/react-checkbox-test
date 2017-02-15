@@ -2,17 +2,23 @@
 
 ### 基于Reactjs && Node 通讯的简单演示
 
-* Reactjs && ES6 && webpack构建移动端京东首页
+* Reactjs && ES6 && webpack构建
 * 基于文件系统的Node.js服务端
 
-![Mou icon](./jd.png)
+*需求
+
+![Mou icon](./need.png)
+
+*效果图
+
+![Mou icon](./test.png)
 
 ## 安装与运行程序
 
 克隆项目
 
 ```
-> $ git clone https://github.com/CanFoo/react.git
+> $ git clone https://github.com/lizzyl/react-checkbox-test.git
 ```
 
 分别进入react目录和server目录下安装依赖包
@@ -44,25 +50,7 @@
 ## 后台接口（jsonp请求）
 轮播图模块
 ```
-http://localhost:3000/data/swiper
+http://localhost:3000/data/recruitment
 ```
 
-更多服务功能
-```
-http://localhost:3000/data/otherapp
-```
 
-秒杀折扣
-```
-http://localhost:3000/data/spike
-```
-
-更多种类选择
-```
-http://localhost:3000/data/more
-```
-
-猜你喜欢
-```
-http://localhost:3000/data/like
-```

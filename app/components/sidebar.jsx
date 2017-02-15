@@ -31,19 +31,14 @@ let SideBar = React.createClass({
 	},
 	handleChangeCheckState: function(index) {
 		let _departments = this.state.departments;
-
 		_departments[index].checked = !_departments[index].checked
-
 		_departments[index].positions.map((item) => {
 			item.checked = !item.checked;
 		});
-
 		this.setState({departments: _departments})
 	},
 	handleChangeCheckState1: function(index1, index2) {
-		console.log(index1+' '+index2)
 		this.state.departments[index1].positions[index2].checked = !this.state.departments[index1].positions[index2].checked
-		// this.setState({departments: _departments})
 		console.log(this.state.departments[index1].positions[index2].checked)
 	},
 	clearCheck: function() {
@@ -56,7 +51,6 @@ let SideBar = React.createClass({
 		}
 	},
 	render: function() {
-
 		return (
 			<div id="recruitment">
 				<div className="head">
@@ -67,7 +61,6 @@ let SideBar = React.createClass({
 			</div>
 		)
 	}
-
 })
 
 module.exports = SideBar;
